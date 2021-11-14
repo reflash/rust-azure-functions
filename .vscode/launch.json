@@ -9,8 +9,8 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=rosalind",
-                    "--package=rosalind",
+                    "--bin=handler",
+                    "--package=handler",
                     "--manifest-path=Cargo.toml"
                 ],
                 "filter": {
@@ -18,6 +18,15 @@
                 }
             },
             "args": []
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug local function",
+            "program": "bash",
+            "args": ["scripts/deploy-local.sh"],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
         }
     ]
 }
